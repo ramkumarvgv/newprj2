@@ -8,12 +8,12 @@
               password: Newone@13579
   - name: pull 
     docker_image:
-            name: labadmin123/newprj123:{{BUILD_NUMBER}}
+            name: labadmin123/newprj123:Latest
 
   - name: create container
     docker_container:
             name: web
-            image: labadmin123/newprj123:{{BUILD_NUMBER}}
+            image: labadmin123/newprj123:Latest
             state: started
             ports:
                     "8888:8080"
