@@ -16,6 +16,6 @@
             image: labadmin123/newprj123:latest
             state: started
             ports:
-                    "80:8080"
+                    "8888:8080"
             tty: true
             detach: true
