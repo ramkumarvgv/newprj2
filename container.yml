@@ -1,0 +1,21 @@
+---
+- hosts: linux
+  become: true
+  tasks:
+  - name: docker_login
+    docker_login:
+              username: labadmin123
+              password: Newone@13579
+  - name: pull 
+    docker_image:
+            name: labadmin123/newprj123:latest
+
+  - name: create container
+    docker_container:
+            name: web
+            image: labadmin123/newprj123:latest
+            state: started
+            ports:
+                    "80:8080"
+            tty: true
+            detach: true
